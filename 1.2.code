@@ -1,0 +1,7 @@
+def feed_me(sex,age):
+    bmax=pd.read_csv('both_maximums.csv').set_index('Nutrition')[age]
+    if sex=='Male':
+        bmin=pd.read_csv('male_minimums.csv').set_index('Nutrition')[age] 
+    if sex=='Female':
+        bmin=female_min=pd.read_csv('female_minimums.csv').set_index('Nutrition')[age]
+    return bmin, bmax
